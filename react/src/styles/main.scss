@@ -1,0 +1,23 @@
+@import './core/reset.scss';
+@media screen and (max-width: 320px) {
+  html {
+  	font-size: 31.25vw;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 400px) {
+  html {
+  	font-size: 26.6vw;
+  }
+}
+@media screen and (min-width: 401px) {
+  html {
+  	font-size: 24.15vw;
+  }
+}
+@import './routers/main.scss';
+@import './routers/find.scss';
+@import './routers/square.scss';
+@import './routers/detail.scss';
+@import './routers/my.scss';
+@import './routers/list.scss';
+@import './routers/login.scss';

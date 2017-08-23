@@ -1,0 +1,115 @@
+#my {
+	height: 100%;
+	@include flexbox();
+	@include flex-direction(column);
+	header {
+		height: 0.5rem;
+		padding: 0 0.12rem;
+		background: #fff;
+		font-size: 0.16rem;
+		font-weight: 600;
+		width: 100%;
+		@include border();
+		@include flexbox();
+		@include flex-direction();
+		&::before {
+			content: "";
+			@include flex(1);
+		}
+		span {
+			@include flex(1);
+			text-align: center;
+			line-height: 0.5rem;
+		}
+		i {
+			@include flex(1);
+			text-align: right;
+			line-height: 0.5rem;
+			font-size: 0.24rem;
+			color: #303030;
+		}
+	}
+	.login a{
+		height: 0.75rem;
+		background: #fff;
+		padding: 0 0.12rem;
+		margin-bottom: 0.2rem;
+		@include flexbox();
+		@include flex-direction();
+		i {
+			color: #d5d7d6;
+			font-size: 0.6rem;
+			height: 0.75rem;
+			line-height: 0.75rem;
+		}
+		span {
+			padding-left: 0.1rem;
+			font-size: 0.16rem;
+			color: #000000;
+			display: inline-block;
+			height: 0.75rem;
+			line-height: 0.75rem;
+		}
+	}
+	.space {
+		@include flexbox();
+		@include flex-direction();
+		@include justify-content(space-around);
+		@include align-items(center);
+		background: #fff;
+		height: 0.7rem;
+		margin-bottom: 0.2rem;
+		a {
+			@include flex(1);
+			display: inline-block;
+			text-align: center;
+			height: 0.3rem;
+			line-height: 0.3rem;
+			font-size: 0.15rem;
+			color: #0e0e0e;
+			@include border(0 2px 0 0,#d7d7d7,solid);
+			i {
+				font-size: 0.24rem;
+				color: #676767;
+				margin-right: 0.15rem;
+			}
+		}
+	}
+	.body {
+		@include flex(1);
+		overflow: scroll;
+		width: 100%;
+	}
+	.list {
+		padding: 0 0.13rem;
+		background: #fff;
+		margin-bottom: 0.2rem;
+		li {
+			@include border(0 0 2px 0,#d8d8d8,solid);
+			a {
+				@include flexbox();
+				@include flex-direction();
+				@include align-items(center);
+				height: 0.55rem;
+				font-size: 0.16rem;
+				color: #040404;
+			}	
+			i {
+				font-size: 0.23rem;
+				color: #6a6a6a;
+				margin-right: 0.13rem;
+			}
+			&:last-child {
+				@include border(0);
+			}
+		}
+	}
+	.share {
+		background: #fff;
+		height: 0.55rem;
+		padding: 0 0.13rem;
+		text-align: center;
+		line-height: 0.55rem;
+		font-size: 0.16rem;
+	} 
+}

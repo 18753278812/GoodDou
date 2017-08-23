@@ -1,0 +1,88 @@
+#login {
+	height: 100%;
+	margin-top: -0.5rem;
+	background: #ffffff;
+	z-index: 1;
+	@include flexbox();
+	@include flex-direction(column);
+	header {
+		height: 0.5rem;
+		padding: 0 0.13rem;
+		@include flexbox();
+		@include flex-direction();
+		@include justify-content(space-between);
+		@include align-items(center);
+		i {
+			font-size: 0.16rem;
+			color: #1c1c1c;
+		}
+		span {
+			font-size: 0.15rem;
+			color: #585858;
+		}
+	}
+	.title {
+		height: 0.7rem;
+		padding-left: 0.2rem;
+		font-size: 0.2rem;
+		color: #262626;
+		line-height: 0.7rem;
+	}
+	.loginbox {
+		padding: 0 0.22rem;
+		span {
+			height: 0.3rem;
+			line-height: 0.3rem;
+			display: inline-block;
+			width: 100%;
+			color: red;
+			&:last-child {
+				text-align: center;
+				color: #6d6d6d;
+			}
+		}
+		.inp {
+			width: 100%;
+			border: 0;
+			border-bottom: 1px #dbdbdb solid;
+			height: 0.3rem;
+		}
+		button {
+			width: 100%;
+			height: 0.5rem;
+			background: #b6b6b6;
+			border:0;
+			@include border(0,#fff,solid,5px);
+			color: #ffffff;
+			font-size: 0.16rem;
+		}
+	}
+	.partner {
+		@include flex(1);
+		@include flexbox();
+		@include flex-direction(column);
+		&::before {
+			content: "";
+			@include flex(1);
+			width: 100%;
+		}
+		width: 100%;
+		.list {
+			@include flexbox();
+			@include flex-direction();
+			@include justify-content(space-between);
+			@include align-items(center);
+			padding: 0 0.65rem;
+			i {
+				font-size: 0.35rem;				
+			}
+			color: #b6b6b6;
+		}
+		.foot {
+			margin: 0.2rem 0 0.25rem;
+			font-size: 0.12rem;
+			text-align: center;
+			color: #6d6d6d;
+		}
+	}
+}
